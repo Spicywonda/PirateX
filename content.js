@@ -1,27 +1,27 @@
 function inyectarPirateX() {
     const titleElement = document.getElementById('appHubAppName');
     
-    // Buscamos el contenedor exacto de los botones de Steam
+    // SteamButtons
     const zonaCompra = document.querySelector('.game_purchase_action_bg') || document.querySelector('.game_purchase_action');
     
     if (!titleElement || document.getElementById('piratex-container')) return;
 
-    // 1. Preparamos los datos del juego
+    // 1. DataGame
     const rawGameName = titleElement.innerText.trim();
     const searchName = encodeURIComponent(rawGameName); 
     const slugName = rawGameName.toLowerCase()
                                 .replace(/[^a-z0-9]+/g, '-') 
                                 .replace(/(^-|-$)/g, ''); 
 
-    // 2. Contenedor principal
+    // 2. Principal
     const container = document.createElement('div');
     container.id = 'piratex-container';
     container.style.cssText = 'display: inline-flex; position: relative; margin-left: 10px; align-items: center; vertical-align: top; z-index: 9999;';
 
-    // 3. Botón principal PirateX (Versión Segura para Firefox)
+    // 3. FirefoxLMAO THIS SHEET
     const btn = document.createElement('button');
     
-    // CAMBIO DE SEGURIDAD: Creamos la imagen y el texto por separado (Adiós innerHTML)
+    // Security change
     const imgLogo = document.createElement('img');
     imgLogo.src = 'https://i.ibb.co/hFNPbKVC/luna-removebg-preview.png';
     imgLogo.style.cssText = 'width: 16px; height: 16px; margin-right: 8px; filter: invert(1) drop-shadow(1px 1px 1px rgba(0,0,0,0.5)); vertical-align: middle;';
@@ -50,7 +50,7 @@ function inyectarPirateX() {
         transition: all 0.15s ease-in-out;
     `;
     
-    // Animaciones
+    // Animations
     btn.onmouseover = () => { 
         btn.style.background = 'linear-gradient(to right, #8ed629 5%, #6aa620 95%)'; 
         btn.style.color = '#ffffff';
@@ -72,7 +72,7 @@ function inyectarPirateX() {
         btn.style.boxShadow = '0 6px 12px rgba(0,0,0,0.4)';
     };
 
-    // 4. El Menú Desplegable
+    // 4. Menus
     const dropdown = document.createElement('div');
     dropdown.style.cssText = `
         display: none;
@@ -88,7 +88,7 @@ function inyectarPirateX() {
         overflow: hidden;
     `;
 
-    // 5. LISTA DE PÁGINAS
+    // 5. Shhh
     const paginas = [
         { nombre: 'Skidrow & Reloaded', url: `https://www.skidrowreloaded.com/?s=${searchName}` },
         { nombre: 'Rexagames', url: `https://rexagames.com/search/?q=${searchName}` }, 
