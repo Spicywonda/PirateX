@@ -1,27 +1,39 @@
 function inyectarPirateX() {
     const titleElement = document.getElementById('appHubAppName');
     
-    // SteamButtons
-    const zonaCompra = document.querySelector('.game_purchase_action_bg') || document.querySelector('.game_purchase_action');
+    // --- MEJORA: Evitar la caja de Demo Wonder Imbecil---
+    let zonaCompra = null;
+    const posiblesZonas = document.querySelectorAll('.game_purchase_action_bg, .game_purchase_action');
+    
+    for (let zona of posiblesZonas) {
+        if (!zona.closest('[id*="demo" i], [class*="demo" i]')) {
+            zonaCompra = zona;
+            break; 
+        }
+    }
     
     if (!titleElement || document.getElementById('piratex-container')) return;
 
-    // 1. DataGame
+    // 1. Datos de Juego
     const rawGameName = titleElement.innerText.trim();
     const searchName = encodeURIComponent(rawGameName); 
     const slugName = rawGameName.toLowerCase()
                                 .replace(/[^a-z0-9]+/g, '-') 
                                 .replace(/(^-|-$)/g, ''); 
+                                
+    // --- NUEVO: Formato específico para GOG GAMES (usa guiones bajos) ---
+    const gogSlug = rawGameName.toLowerCase()
+                               .replace(/[^a-z0-9]+/g, '_')
+                               .replace(/(^_|_$)/g, '');
 
-    // 2. Principal
+    // 2. Contenedor principal
     const container = document.createElement('div');
     container.id = 'piratex-container';
     container.style.cssText = 'display: inline-flex; position: relative; margin-left: 10px; align-items: center; vertical-align: top; z-index: 9999;';
 
-    // 3. FirefoxLMAO THIS SHEET
+    // 3. Botón principal PirateX
     const btn = document.createElement('button');
     
-    // Security change
     const imgLogo = document.createElement('img');
     imgLogo.src = 'https://i.ibb.co/hFNPbKVC/luna-removebg-preview.png';
     imgLogo.style.cssText = 'width: 16px; height: 16px; margin-right: 8px; filter: invert(1) drop-shadow(1px 1px 1px rgba(0,0,0,0.5)); vertical-align: middle;';
@@ -50,7 +62,7 @@ function inyectarPirateX() {
         transition: all 0.15s ease-in-out;
     `;
     
-    // Animations
+    // Animaciones
     btn.onmouseover = () => { 
         btn.style.background = 'linear-gradient(to right, #8ed629 5%, #6aa620 95%)'; 
         btn.style.color = '#ffffff';
@@ -72,7 +84,7 @@ function inyectarPirateX() {
         btn.style.boxShadow = '0 6px 12px rgba(0,0,0,0.4)';
     };
 
-    // 4. Menus
+    // 4. El Menú Desplegable
     const dropdown = document.createElement('div');
     dropdown.style.cssText = `
         display: none;
@@ -88,12 +100,13 @@ function inyectarPirateX() {
         overflow: hidden;
     `;
 
-    // 5. Shhh
+    // 5. LISTA DE PÁGINAS ACTUALIZADA
     const paginas = [
         { nombre: 'Skidrow & Reloaded', url: `https://www.skidrowreloaded.com/?s=${searchName}` },
         { nombre: 'Rexagames', url: `https://rexagames.com/search/?q=${searchName}` }, 
         { nombre: 'Ankergames', url: `https://ankergames.net/game/${slugName}` },
-        { nombre: 'Astral Games', url: `https://astral-games.xyz/game/${slugName}` }
+        { nombre: 'Astral Games', url: `https://astral-games.xyz/game/${slugName}` },
+        { nombre: 'GOG GAMES', url: `https://gog-games.to/game/${gogSlug}` }
     ];
 
     paginas.forEach(pag => {
