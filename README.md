@@ -1,6 +1,6 @@
 # 🏴‍☠️ PirateX - Steam Search Extension
 
-![Version](https://img.shields.io/badge/Version-1.3-blue)
+![Version](https://img.shields.io/badge/Version-1.4-blue)
 ![Browser](https://img.shields.io/badge/Browser-Firefox-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -22,6 +22,7 @@ The dropdown menu includes quick search links for:
 * Rexagames
 * Ankergames
 * Astral Games
+* GoG Games
 
 ## 🚀 Manual Installation (Firefox)
 
