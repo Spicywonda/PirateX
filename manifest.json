@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "PirateX",
+  "version": "1.3",
+  "description": "Añade el botón PirateX en la tienda de Steam.",
+  "permissions": ["activeTab"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "piratex@tu-nombre.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://store.steampowered.com/app/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
