@@ -1,6 +1,6 @@
 # 🏴‍☠️ PirateX - Steam Search Extension
 
-![Version](https://img.shields.io/badge/Version-1.0-blue)
+![Version](https://img.shields.io/badge/Version-1.3-blue)
 ![Browser](https://img.shields.io/badge/Browser-Firefox-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
