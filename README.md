@@ -32,7 +32,7 @@ The dropdown menu includes quick search links for:
 The fastest way to install PirateX on **Chrome, Firefox, Opera, or Edge** is by using a UserScript manager.
 
 1. Install [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) in your browser.
-2. **[CLICK HERE TO INSTALL PIRATEX](piratex.user.js)** 3. Your script manager will pop up automatically. Click **Confirm Installation**.
+2. **[CLICK HERE TO INSTALL PIRATEX](https://github.com/Spicywonda/PirateX/raw/refs/heads/main/piratex.user.js)** 3. Your script manager will pop up automatically. Click **Confirm Installation**.
 4. You're done! Go to any game page on Steam and enjoy. 🏴‍☠️
 
 ### Method 2: Manual Installation (Firefox Extension)
