@@ -4,8 +4,6 @@
 ![Platform](https://img.shields.io/badge/Platform-Chrome%20%7C%20Firefox%20%7C%20Edge-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-*(PEGA EL CÓDIGO DE TU IMAGEN O ARRASTRA TU FOTO JUSTO AQUÍ)*
-
 **PirateX** is a lightweight and elegant extension/userscript that natively integrates into the Steam store. It adds a custom dropdown menu right next to the purchase button, allowing you to quickly search for the game you are viewing on your favorite websites with a single click.
 
 ---
