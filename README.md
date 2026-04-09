@@ -32,19 +32,19 @@ The dropdown menu includes quick search links for:
 The fastest way to install PirateX on **Chrome, Firefox, Opera, or Edge** is by using a UserScript manager.
 
 1. Install [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) in your browser.
-2. **[CLICK HERE TO INSTALL PIRATEX](PEGA_AQUI_TU_ENLACE_RAW)** 3. Your script manager will pop up automatically. Click **Confirm Installation**.
+2. **[CLICK HERE TO INSTALL PIRATEX](https://github.com/Spicywonda/PirateX/raw/refs/heads/main/piratex.user.js)** 3. Your script manager will pop up automatically. Click **Confirm Installation**.
 4. You're done! Go to any game page on Steam and enjoy. 🏴‍☠️
 
 ### Method 2: Manual Installation (Firefox Extension)
 Since this extension is an independent project, you can easily install it locally:
 
-1. Download the `.xpi` file from the **[Releases](https://github.com/TU-USUARIO/PirateX/releases)** section.
+1. Download the `.xpi` file from the **[Releases](https://github.com/Spicywonda/PirateX/releases/download/1.4/PirateX1.4Final.xpi)** section.
 2. Open your Firefox browser.
 3. Drag and drop the `.xpi` file directly into any open Firefox window.
 4. Click "Add" when the installation prompt appears.
 
 ### Method 3: Manual Installation (Google Chrome)
-1. Download the `PirateX-Chrome.zip` file from the **[Releases](https://github.com/TU-USUARIO/PirateX/releases)** section.
+1. Download the `PirateX-Chrome.zip` file from the **[Releases](https://github.com/Spicywonda/PirateX/releases/tag/1.4)** section.
 2. Extract the `.zip` file on your computer.
 3. Open Google Chrome and type `chrome://extensions/` in the address bar.
 4. Enable **"Developer mode"** in the top right corner.
